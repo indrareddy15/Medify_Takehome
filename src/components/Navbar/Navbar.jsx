@@ -35,7 +35,6 @@ function Navbar() {
       ) : (
         <>
           <nav className="nav">
-            <img src={CloseIcon} alt="MenuIcon" />
             <a href="/">Find Doctors</a>
             <a href="/">Hospitals</a>
             <a href="/">Medicines</a>
