@@ -1,10 +1,12 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import "./Navbar.css";
 import HearderLogo from "../../assets/headerLogo.png";
 import MenuIcon from "../../assets/menu.svg";
 import CloseIcon from "../../assets/close.svg";
-import "./Navbar.css";
 
-function Navbar() {
+const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -12,7 +14,7 @@ function Navbar() {
   };
 
   return (
-    <header className="header">
+    <header>
       <img src={HearderLogo} alt="HeaderLogo" />
       {sidebarOpen ? (
         <>
@@ -21,33 +23,41 @@ function Navbar() {
               className="close"
               src={CloseIcon}
               alt="CloseIcon"
+              srcset=""
               onClick={toggleSidebar}
             />
-            <a href="/">Find Doctors</a>
-            <a href="/">Hospitals</a>
-            <a href="/">Medicines</a>
-            <a href="/">Surgeries</a>
-            <a href="/">Software for Provider</a>
-            <a href="/">Fecilities</a>
+            <a>Find Doctors</a>
+            <a>Hospitals</a>
+            <a>Medicines</a>
+            <a>Surgeries</a>
+            <a>Software for Provider</a>
+            <a>Facilitiesfhgdfg</a>
             <button>My Bookings</button>
           </nav>
         </>
       ) : (
         <>
           <nav className="nav">
-            <a href="/">Find Doctors</a>
-            <a href="/">Hospitals</a>
-            <a href="/">Medicines</a>
-            <a href="/">Surgeries</a>
-            <a href="/">Software for Provider</a>
-            <a href="/">Fecilities</a>
+            <a>Find Doctors</a>
+            <a>Hospitals</a>
+            <a>Medicines</a>
+            <a>Surgeries</a>
+            <a>Software for Provider</a>
+            <a>Facilities</a>
             <button>My Bookings</button>
           </nav>
         </>
       )}
-      <img src={MenuIcon} alt="MenuIcon" className="menu" />
+
+      <img
+        src={MenuIcon}
+        alt="MenuIcon"
+        className="menu"
+        srcset=""
+        onClick={toggleSidebar}
+      />
     </header>
   );
-}
+};
 
 export default Navbar;
