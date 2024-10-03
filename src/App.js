@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './components/Footer/FooterSection';
 import HeaderScroll from './components/HeaderScroll/HeaderScroll';
 import Navbar from './components/Navbar/Navbar';
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <HeaderScroll />
       <Navbar />
+      <Footer />
     </div>
   );
 }
