@@ -1,4 +1,4 @@
-const { default: axios } = require("axios");
+import axios from "axios"
 
 const API_BASE_URL = "https://meddata-backend.onrender.com";
 
@@ -6,7 +6,6 @@ const apiService = {
   getStates: async () => {
     try {
       const response = await axios.get(`${API_BASE_URL}/states`);
-      console.log("States Res", response.data);
       return response.data;
     } catch (error) {
       console.error("Error in fetching States: ", error);
@@ -14,9 +13,9 @@ const apiService = {
     }
   },
 
-  getCitiesByState: async () => {
+  getCitiesByState: async (state) => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/cities/:state`);
+      const response = await axios.get(`${API_BASE_URL}/cities/${state}`);
       return response.data;
     } catch (error) {
       console.error("Error in fetching :", error);
@@ -24,10 +23,10 @@ const apiService = {
     }
   },
 
-  getMedicalCenters: async () => {
+  getMedicalCenters: async (state, city) => {
     try {
       const response = await axios.get(
-        `${API_BASE_URL}/data?state=<state-name>&city=<city-name>`
+        `${API_BASE_URL}/data?state=${state}&city=${city}`
       );
       return response.data;
     } catch (error) {
@@ -37,6 +36,6 @@ const apiService = {
   },
 };
 
-console.log(apiService.getStates())
+// console.log(apiService.getStates())
 
-// export default apiService;
+export default apiService;
