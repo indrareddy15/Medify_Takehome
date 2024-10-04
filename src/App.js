@@ -3,7 +3,7 @@ import "./App.css";
 import Footer from "./components/Footer/FooterSection";
 import HeaderScroll from "./components/HeaderScroll/HeaderScroll";
 import Navbar from "./components/Navbar/Navbar";
-import apiService from "./apiService/apiService";
+// import apiService from "./apiService/apiService";
 import HeroSection from "./components/HeroSection/HeroSection";
 
 function App() {
@@ -17,57 +17,68 @@ function App() {
   console.log("states", states)
   console.log("cities", cities)
   // console.log(states)
-  // const API_BASE_URL = "https://meddata-backend.onrender.com";
-  const fetchState = async () => {
+
+
+  const API_BASE_URL = "https://meddata-backend.onrender.com";
+
+
+  const fetchStates = async () => {
     try {
-      const stateData = await apiService.getStates();
-      // const response = await fetch(`${API_BASE_URL}/states`)
-      // const stateData = await response.json()
+      // const stateData = await apiService.getStates();
+      const response = await fetch(`${API_BASE_URL}/states`)
+      if (!response.ok) throw new Error('Failed to fetch states');
+      const stateData = await response.json()
       setStates(stateData);
       setLoading(false);
     } catch (error) {
       console.error("Error fetching states:", error);
       setLoading(false);
+    } finally {
+      setLoading(true)
     }
   };
 
   const fetchCities = async (state) => {
-    if (selectedCity) {
-      try {
-        const cityData = await apiService.getCitiesByState(state);
-        // const response = await fetch(`${API_BASE_URL}/states`)
-        // const cityData = await response.json()
-        setCities(cityData);
-      } catch (error) {
-        console.error("Error fetching states:", error);
-      }
-    } else {
-      setCities([]);
+    if (!state) {
+      setCities([])
+      return
     }
+    try {
+      // const cityData = await apiService.getCitiesByState(state);
+      const response = await fetch(`${API_BASE_URL}/cities/${state}`)
+      if (!response.ok) throw new Error('Failed to fetch states');
+      const cityData = await response.json()
+      setCities(cityData);
+    } catch (error) {
+      console.error("Error fetching states:", error);
+    }
+
   };
 
   const fetchMedicalCenters = async (state, city) => {
-    if (selectedCity && selectedState) {
-      try {
-        const medicalData = await apiService.getMedicalCenters(state, city);
-        // const response = await fetch(`${API_BASE_URL}/states`)
-        // const medicalData = await response.json()
-        setMedicalCenters(medicalData);
-      } catch (error) {
-        console.error("Error fetching states:", error);
-      }
-    } else {
+    if (!state || !city) {
       setMedicalCenters([]);
+      return;
     }
-  };
+    try {
+      // const medicalData = await apiService.getMedicalCenters(state, city);
+      const response = await fetch(`${API_BASE_URL}/data?state=${state}&city=${city}`)
+      if (!response.ok) throw new Error('Failed to fetch states');
+      const medicalData = await response.json()
+      setMedicalCenters(medicalData);
+    } catch (error) {
+      console.error("Error fetching states:", error);
+    }
+  }
+
 
   useEffect(() => {
-    fetchState();
+    fetchStates();
   }, []);
 
   useEffect(() => {
-    fetchCities(selectedCity);
-  }, [selectedCity]);
+    fetchCities(selectedState);
+  }, [selectedState]);
 
   useEffect(() => {
     fetchMedicalCenters(selectedCity, selectedState);

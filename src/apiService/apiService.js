@@ -16,6 +16,7 @@ const apiService = {
   getCitiesByState: async (state) => {
     try {
       const response = await axios.get(`${API_BASE_URL}/cities/${state}`);
+      console.log("response", response.data)
       return response.data;
     } catch (error) {
       console.error("Error in fetching :", error);
@@ -36,6 +37,7 @@ const apiService = {
   },
 };
 
-// console.log(apiService.getStates())
+const state = 'illions'
+console.log(apiService.getCitiesByState(state))
 
-export default apiService;
+// export default apiService;

@@ -1,4 +1,5 @@
 import React from "react";
+import "./HeroSection.css";
 import Navbar from "../Navbar/Navbar";
 import DoctorLogo from "../../assets/Doctorlogo.png";
 import DrugStore from "../../assets/Drugstore.png";
@@ -38,7 +39,7 @@ const HeroSection = ({
         <div className="floating-div">
           <div className="input-form">
             <div className="input-control">
-              <img src={SearchGrey} alt="" srcset="" />
+              <img src={SearchGrey} alt="" />
               <select
                 value={selectedState}
                 onChange={(e) => setSelectedState(e.target.value)}
@@ -53,7 +54,7 @@ const HeroSection = ({
             </div>
 
             <div className="input-control">
-              <img src={SearchGrey} alt="" srcset="" />
+              <img src={SearchGrey} alt="" />
               <select
                 value={selectedCity}
                 onChange={(e) => setSelectedCity(e.target.value)}
@@ -74,7 +75,7 @@ const HeroSection = ({
           </div>
 
           <h5>You may be looking for</h5>
-          <div className="category">
+          <div className="img-category">
             <div>
               <img src={DoctorLogo} alt="" />
               <h6>Doctors</h6>
