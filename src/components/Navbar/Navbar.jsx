@@ -23,7 +23,6 @@ const Navbar = () => {
               className="close"
               src={CloseIcon}
               alt="CloseIcon"
-              srcset=""
               onClick={toggleSidebar}
             />
             <a>Find Doctors</a>
@@ -53,7 +52,6 @@ const Navbar = () => {
         src={MenuIcon}
         alt="MenuIcon"
         className="menu"
-        srcset=""
         onClick={toggleSidebar}
       />
     </header>
