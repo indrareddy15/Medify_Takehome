@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0px 100px;
+  margin: 0 100px;
   margin-bottom: 250px;
 }
 
@@ -28,7 +28,7 @@
   color: rgba(16, 40, 81, 1);
 }
 
-.hero-text > h3 > span:nth-child(1) {
+.hero-text > h3 > span {
   color: rgba(0, 0, 0, 1);
   font-size: 56px;
   font-weight: 700;
@@ -39,11 +39,6 @@
 
 .hero-text > h3 > span:nth-child(2) {
   color: rgba(42, 167, 255, 1);
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 68px;
-  letter-spacing: 0.02em;
-  text-align: left;
 }
 
 .hero-text > p {
@@ -52,14 +47,13 @@
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0.02em;
-  text-align: left;
 }
 
 .hero-text > button {
   background-color: rgba(42, 168, 255, 1);
-  padding: 12px 36px 12px 36px;
+  padding: 12px 36px;
   border-radius: 8px;
-  margin: 30px 0px;
+  margin: 30px 0;
   color: rgba(255, 255, 255, 1);
   font-size: 16px;
   font-weight: 500;
@@ -68,29 +62,29 @@
   cursor: pointer;
 }
 
-.offer-img {
+.swiper-card {
   width: 100%;
   background-color: #fff;
   padding-top: 150px;
   padding-bottom: 10px;
 }
 
-.offer-img-sm {
+.swiper-card-sm {
   display: none;
 }
 
-.offer {
+.card {
   width: 398px;
   height: 199px;
   border-radius: 20px;
-  margin: 40px 0px;
+  margin: 40px 0;
 }
 
 .floating-div {
   border: 1px solid rgba(240, 240, 240, 1);
   width: 1170px;
   background: rgba(255, 255, 255, 1);
-  box-shadow: 6px 6px 35px 0px rgba(16, 40, 81, 0.11);
+  box-shadow: 6px 6px 35px rgba(16, 40, 81, 0.11);
   border-radius: 15px;
   position: absolute;
   left: 0;
@@ -104,11 +98,12 @@
   align-items: center;
   justify-content: center;
   gap: 50px;
-  margin: 50px 0px;
+  margin: 50px 0;
 }
 
-.input-controll {
+.input-control {
   height: 50px;
+  width: 285px;
   border-radius: 8px;
   background-color: rgba(250, 251, 254, 1);
   border: 1px solid rgba(240, 240, 240, 1);
@@ -120,20 +115,13 @@
   width: 285px;
 }
 
-.input-controll > img {
+.input-control > img {
   padding: 15px;
 }
-.input-controll > select {
-  padding: 10px 0px;
-  background-color: rgba(250, 251, 254, 1);
-  color: rgba(171, 182, 199, 1);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0.02em;
-}
-.input-controll > input {
-  padding: 10px 0px;
+
+.input-control > select,
+.input-control > input {
+  padding: 10px 0;
   background-color: rgba(250, 251, 254, 1);
   color: rgba(171, 182, 199, 1);
   font-size: 14px;
@@ -173,7 +161,7 @@
   align-items: center;
   width: 100%;
   justify-content: center;
-  margin: 35px 0px;
+  margin: 35px 0;
   gap: 20px;
 }
 
@@ -202,23 +190,25 @@
   letter-spacing: 0.02em;
 }
 
+/* Media Queries */
 @media screen and (max-width: 2560px) {
   .hero-content {
     width: 70%;
-    margin: 0px auto;
+    margin: 0 auto;
     margin-bottom: 250px;
   }
 }
+
 @media screen and (max-width: 1440px) {
   .hero-content {
-    margin: 0px 100px;
+    margin: 0 100px;
     margin-bottom: 250px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero-content {
-    margin: 0px 30px;
+    margin: 0 30px;
     margin-bottom: 250px;
   }
 
@@ -235,12 +225,7 @@
     line-height: 30px;
   }
 
-  .hero-text > h3 > span:nth-child(1) {
-    font-size: 36px;
-    line-height: 38px;
-  }
-
-  .hero-text > h3 > span:nth-child(2) {
+  .hero-text > h3 > span {
     font-size: 36px;
     line-height: 38px;
   }
@@ -296,10 +281,10 @@
 
 @media screen and (max-width: 480px) {
   .hero-content {
-    margin: 0px auto;
+    margin: 0 auto;
     width: 320px;
     margin-bottom: 20px;
-    padding: 0px 10px;
+    padding: 0 10px;
   }
 
   .hero-content > img {
@@ -316,14 +301,7 @@
     letter-spacing: 0.01em;
   }
 
-  .hero-text > h3 > span:nth-child(1) {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 38px;
-    letter-spacing: 0.02em;
-  }
-
-  .hero-text > h3 > span:nth-child(2) {
+  .hero-text > h3 > span {
     font-size: 36px;
     font-weight: 700;
     line-height: 38px;
@@ -341,17 +319,17 @@
     display: none;
   }
 
-  .offer-img {
+  .swiper-card {
     display: none;
   }
 
-  .offer-img-sm {
+  .swiper-card-sm {
     display: block;
     width: 100%;
     background-color: #fff;
   }
 
-  .offer {
+  .card {
     width: 300px;
     border-radius: 20px;
   }

@@ -86,6 +86,7 @@ function App() {
 
   return (
     <div className="App">
+      <HeaderScroll />
       <HeroSection
         states={states}
         cities={cities}
@@ -94,8 +95,7 @@ function App() {
         setSelectedState={setSelectedState}
         setSelectedCity={setSelectedCity}
       />
-      <HeaderScroll />
-      <Navbar />
+
       <Footer />
     </div>
   );
