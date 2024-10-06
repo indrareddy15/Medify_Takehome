@@ -1,4 +1,4 @@
-.footer-section {
+.FooterSection {
   background: rgba(27, 60, 116, 1);
   width: 100%;
   padding: 40px 80px;
@@ -9,25 +9,25 @@
   width: 100%;
 }
 
-.logo {
+.footerlogo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-right: 200px;
 }
 
-.logo > img {
+.footerlogo > img {
   width: 126px;
   height: 36px;
   margin-top: 40px;
 }
 
-.logo > div {
+.footerlogo > div {
   display: flex;
   gap: 20px;
 }
 
-.aboutus-col {
+.col-1 {
   width: 231px;
   display: flex;
   flex-direction: column;
@@ -39,15 +39,15 @@
   margin: 0 30px;
 }
 
-.aboutus-col > i {
+.col-1 > i {
   margin: 5px 5px 5px 5px;
 }
 
 .arrow {
   width: 10px;
   height: 15px;
-  margin-right: 20px;
-  margin-bottom: 5px;
+  margin-right: 15px;
+  /* margin-bottom: 5px; */
 }
 
 .copyright {
@@ -62,7 +62,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .footer-section {
+  .FooterSection {
     background: rgba(27, 60, 116, 1);
     width: 100%;
     padding: 30px 5px;
@@ -74,7 +74,7 @@
     width: 100%;
   }
 
-  .logo {
+  .footerlogo {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,7 +82,7 @@
     margin-right: 0px;
   }
 
-  .logo > img {
+  .footerlogo > img {
     display: flex;
     margin: auto;
     width: 126px;
@@ -90,13 +90,13 @@
     margin-top: 10px;
   }
 
-  .logo > div {
+  .footerlogo > div {
     display: flex;
     justify-content: center;
     gap: 10px;
   }
 
-  .aboutus-col {
+  .col-1 {
     width: 231px;
     display: flex;
     flex-direction: column;
@@ -108,7 +108,7 @@
     margin: 0 30px;
   }
 
-  .aboutus-col > i {
+  .col-1 > i {
     margin: 5px 5px 5px 5px;
   }
 
