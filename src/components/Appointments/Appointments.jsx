@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Modal from "./DialogModel/Model";
 
 const Appointments = ({
   name,
@@ -21,6 +22,7 @@ const Appointments = ({
   const [selectedDay, setSelectedDay] = useState(0);
   const [selectedSlot, setSelectedSlot] = useState("");
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const swiperRef = useRef(null);
 
@@ -32,16 +34,28 @@ const Appointments = ({
 
   const handleSlotSelect = (slot) => {
     setSelectedSlot(slot);
+    setIsModalOpen(true); // Open the modal when a slot is selected
+  };
 
+  const handleModalSubmit = ({ phoneNumber, email }) => {
     const updatedAvailableSlots = availableSlots.map((day) => ({
       ...day,
-      morning: day.morning.filter((item) => item !== slot),
-      afternoon: day.afternoon.filter((item) => item !== slot),
-      evening: day.evening.filter((item) => item !== slot),
+      morning: day.morning.filter((item) => item !== selectedSlot),
+      afternoon: day.afternoon.filter((item) => item !== selectedSlot),
+      evening: day.evening.filter((item) => item !== selectedSlot),
     }));
 
     setAvailableSlots(updatedAvailableSlots);
-    addAppointment(name, availableSlots[selectedDay].day, slot, state, city);
+    addAppointment(
+      name,
+      availableSlots[selectedDay].day,
+      selectedSlot,
+      state,
+      city,
+      phoneNumber,
+      email
+    );
+    setIsModalOpen(false); // Close modal after submission
   };
 
   const handlePrevButtonClick = () => {
@@ -125,6 +139,11 @@ const Appointments = ({
           </>
         )}
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSubmit={handleModalSubmit}
+      />
     </div>
   );
 };
