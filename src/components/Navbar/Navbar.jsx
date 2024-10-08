@@ -5,9 +5,12 @@ import "./Navbar.css";
 import HearderLogo from "../../assets/headerLogo.png";
 import MenuIcon from "../../assets/menu.svg";
 import CloseIcon from "../../assets/close.svg";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -15,7 +18,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <img src={HearderLogo} alt="HeaderLogo" />
+      <img src={HearderLogo} alt="HeaderLogo" onClick={() => navigate("/")} />
       {sidebarOpen ? (
         <>
           <nav className="sidebar">
@@ -31,19 +34,21 @@ const Navbar = () => {
             <a>Surgeries</a>
             <a>Software for Provider</a>
             <a>Facilitiesfhgdfg</a>
-            <button>My Bookings</button>
+            <button onClick={() => navigate("/myBookings")}>
+              My Bookingsss1234567890
+            </button>
           </nav>
         </>
       ) : (
         <>
           <nav className="nav">
-            <a>Find Doctors</a>
+            <a onClick={() => navigate("/findDoctor")}>Find Doctors</a>
             <a>Hospitals</a>
             <a>Medicines</a>
             <a>Surgeries</a>
             <a>Software for Provider</a>
             <a>Facilities</a>
-            <button>My Bookings</button>
+            <button onClick={() => navigate("/myBookings")}>My Bookings</button>
           </nav>
         </>
       )}

@@ -1,8 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./components/Footer/FooterSection";
 import HeaderScroll from "./components/HeaderScroll/HeaderScroll";
-import Navbar from "./components/Navbar/Navbar";
 // import apiService from "./apiService/apiService";
 import HeroSection from "./components/HeroSection/HeroSection";
 import appointDates from "./Appointments.js";
