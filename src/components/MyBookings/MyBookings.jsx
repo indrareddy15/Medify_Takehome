@@ -14,7 +14,6 @@ const MyBookings = ({ appointments }) => {
   return (
     <>
       <Navbar />
-      <div className="blueSection">My Bookings</div>
       <div className="floating-search">
         <div className="input-controll input-width">
           <img src={SearchLogo} alt="Search Logo" />
