@@ -1,6 +1,4 @@
 # MEDIFY - Medical Center Slot Booking Platform
-
-
 ## The App
 
 **Crio Code-A-Thon Project:** React-based web application that allows users to find medical centers in a specific state and city across the USA and book appointments.
@@ -34,6 +32,3 @@
 `SWIPER`
 `MATERIAL UI`
 `Axios`
-
-
-**Had fun building!** 🚀
