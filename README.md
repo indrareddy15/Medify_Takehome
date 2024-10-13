@@ -1,45 +1,52 @@
 # Medify_Takehome
 
-# MEDIFY - Medical Center Slot Booking Platform
+## MEDIFY - Medical Center Slot Booking Platform
 
-![Screenshot of App](./src/assets/Screenshot1.png)
+![Screenshot of App](./src/assets/Demo.png)
 
 ## The App
 
-**Crio Code-A-Thon Project:** React-based web application that allows users to find medical centers in a specific state and city across the USA and book appointments.
+**Code-A-Thon Project:** A React-based web application that allows users to find medical centers in specific states and cities across the USA and book appointments.
 
+## Features
 
-## Features:
 - **Landing Page:**
-    - App has top navigation bar with access to platform sections such as Find Doctors, Hospitals, Medicines, and more.
-    - App hasa  search section for users to select a state and city, leading to a list of available medical centers in the chosen area.
-    - Both State and City has a dropdown where the options are fetched from an api.
+
+  - The app has a top navigation bar with access to sections such as Find Doctors, Hospitals, Medicines, and more.
+  - It includes a search section for users to select a state and city, leading to a list of available medical centers in the chosen area.
+  - Both State and City have dropdowns populated by an API.
+
 - **Search Results Page:**
-    - Search result pages has a listings view showing available medical centers in the selected location with the option to book appointments.
+
+  - The search results page displays a listing of available medical centers in the selected location, with the option to book appointments.
+
 - **Booking Interface:**
-    - App has a detailed booking section for users to select a medical center, with a calendar-like interface to choose an appointment date.
-    - Booking Interface has the ability to book an appointment within a time frame from today up to one week in advance.
-    - Booking Interface has a selection of available time slots for the selected day.
+
+  - The app provides a detailed booking section where users can select a medical center and choose an appointment date using a calendar-like interface.
+  - Users can book an appointment within a time frame from today up to one week in advance.
+  - The booking interface displays available time slots for the selected day.
+
 - **My Bookings Page:**
-    - My Bookings Page is a personalized page that displays all user bookings, including details such as the medical center's name, appointment date, and time.
+
+  - The My Bookings page is personalized and displays all user bookings, including details such as the medical center's name, appointment date, and time.
+
 - **Responsive Design:**
-    - The application is fully responsive to various screen widths.
+  - The application is fully responsive, adapting to various screen sizes.
 
+## Technologies Used
 
-## Tech Used
+- `HTML`
+- `CSS`
+- `JavaScript`
+- `React.js`
+- `React Router DOM`
 
-`HTML`
-`CSS`
-`REACT JS`
-`REACT ROUTER DOM`
+## NPM Libraries Used
 
-## NPM library used to
+- `Swiper`
+- `Material UI`
+- `Axios`
 
-`SWIPER`
-`MATERIAL UI`
-`Axios`
+## Demo
 
-
-- <a href="https://medify-azure.vercel.app/" target="_blank">Click here for demo</a>
-
-**Had fun building!** 🚀
+- [Click here for the demo](https://medify-takehome-feoxtz8xx-indra-reddys-projects.vercel.app/)
