@@ -1,15 +1,23 @@
+<<<<<<< HEAD
 # Medify_Takehome
 
 ## MEDIFY - Medical Center Slot Booking Platform
 
 ![Screenshot of App](./src/assets/Demo.png)
 
+=======
+# MEDIFY - Medical Center Slot Booking Platform
+>>>>>>> a43c1971313ee7c12680b47fbe49a0e908ef19b8
 ## The App
 
 **Code-A-Thon Project:** A React-based web application that allows users to find medical centers in specific states and cities across the USA and book appointments.
 
+<<<<<<< HEAD
 ## Features
 
+=======
+## Features:
+>>>>>>> a43c1971313ee7c12680b47fbe49a0e908ef19b8
 - **Landing Page:**
 
   - The app has a top navigation bar with access to sections such as Find Doctors, Hospitals, Medicines, and more.
@@ -47,6 +55,12 @@
 - `Material UI`
 - `Axios`
 
+<<<<<<< HEAD
 ## Demo
 
 - [Click here for the demo](https://medify-takehome-feoxtz8xx-indra-reddys-projects.vercel.app/)
+=======
+`SWIPER`
+`MATERIAL UI`
+`Axios`
+>>>>>>> a43c1971313ee7c12680b47fbe49a0e908ef19b8
